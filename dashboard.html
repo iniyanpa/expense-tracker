@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="dashboard.js"></script>
+</head>
+<body>
+
+<h2>Expense Dashboard</h2>
+<h3>Financial Summary</h3>
+
+<table border="1">
+<tr>
+<td>Total Balance: ₹ <span id="totalBalance">0</span></td>
+<td>Total Income: ₹ <span id="totalIncome">0</span></td>
+<td>Total Expense: ₹ <span id="totalExpense">0</span></td>
+</tr>
+</table>
+
+<br><br>
+
+<canvas id="expensePieChart" width="400" height="200"></canvas>
+
+<br><br>
+
+<canvas id="monthlyChart" width="400" height="200"></canvas>
+
+<a href="index.html">Add Transaction</a>
+
+<br><br>
+
+Filter by Account:
+
+<select id="accountFilter">
+    <option value="">All</option>
+    <option>CANARA BANK</option>
+    <option>ICICI SAVINGS</option>
+    <option>HDFC</option>
+    <option>SBI</option>
+    <option>ICICI CURRENT</option>
+    <option>KVB</option>
+    <option>ZAGGLE</option>
+    <option>PAV CNB</option>
+    <option>PAV IOB</option>
+</select>
+
+Filter by Type:
+
+<select id="typeFilter">
+    <option value="">All</option>
+    <option>RENT - OUT</option>
+    <option>HOUSEHOLD EXPENSE</option>
+    <option>MEDICAL</option>
+    <option>FUEL & TRAVEL</option>
+    <option>MISC</option>
+    <option>SALARY</option>
+    <option>ONLINE PURCHASE</option>
+    <option>FOOD ORDERS</option>
+</select>
+
+<br><br>
+
+<h3>Total Balance: ₹ <span id="balance">0</span></h3>
+
+<table border="1">
+
+<thead>
+<tr>
+<th>Date</th>
+<th>Account</th>
+<th>Income</th>
+<th>Expense</th>
+<th>Type</th>
+<th>Total</th>
+<th>Remarks</th>
+</tr>
+</thead>
+
+<tbody id="tableBody"></tbody>
+
+</table>
+
+</body>
+</html>
